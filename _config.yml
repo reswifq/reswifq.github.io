@@ -24,8 +24,9 @@ show_downloads: true
 twitter_username: valeriomazzeo
 github_username: valeriomazzeo
 
-github:
-  repository_url: "https://github.com/reswifq/reswifq"
+github_repository_url: "https://github.com/reswifq/reswifq"
+github_zip_url: "https://github.com/reswifq/reswifq/zipball/master"
+github_tar_url: "https://github.com/reswifq/reswifq/tarball/master"
 
 # Build settings
 markdown: kramdown
