@@ -166,7 +166,7 @@ while true {
 An example of how to instantiate and run a worker process.
 
 ```swift
-let client = RedisClientPool(maxElementCount: 10) { () -> RedisClient in
+let client = RedisClientPool(maxElementCount: 10) { () throws -> RedisClient in
 
     let client = Redis()
     client.connect(host: "localhost", port: 6379, callback: { _ in })
@@ -203,7 +203,7 @@ An instance of `Reswifc`, configured with both a `Monitor` and a `Scheduler` pro
 - **Scheduler** - analyzes the delayed queue for overdue jobs and schedules them for execution
 
 ```swift
-let client = RedisClientPool(maxElementCount: 2) { () -> RedisClient in
+let client = RedisClientPool(maxElementCount: 2) { () throws -> RedisClient in
 
     let client = Redis()
     client.connect(host: "localhost", port: 6379, callback: { _ in })
